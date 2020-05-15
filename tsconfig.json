@@ -65,5 +65,20 @@
     /* Advanced Options */
     "skipLibCheck": true,                     /* Skip type checking of declaration files. */
     "forceConsistentCasingInFileNames": true  /* Disallow inconsistently-cased references to the same file. */
-  }
+  },
+  "exclude": [
+    /*
+    "analytics.ts" //excludes analytics.ts
+    "*.dev.ts" //excludes everything with the .dev.ts extension
+    "**.dev.ts" //excludes everything with the .dev.ts extension in any folder
+    */
+    "node_modules"
+  ],
+  /*
+  "include": [
+    "app.ts",
+    "analytics.ts"
+  ]
+  */
+  //if exclude/include is used, one must specify files, otherwise they're left out of the exclusion/inclusion
 }
