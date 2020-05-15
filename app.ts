@@ -6,10 +6,17 @@ function printResult(num:number):void {
     console.log('Result: ' + num);
 }
 
+function addAndHandle(n1:number, n2:number, cb:(num:number) => void) {
+    const result = n1 + n2;
+    cb(result);
+}
+
 printResult(add(4, 4));
 
-let combineValues: (a:number, b:number) => number;
+let combineValues:(a:number, b:number) => number;
 
 combineValues = add;
 
 console.log(combineValues(8, 8));
+
+addAndHandle(15, 15, (result) => { console.log(result) });
