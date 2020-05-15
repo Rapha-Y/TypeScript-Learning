@@ -1,10 +1,14 @@
-function add(n1, n2) {
-    return n1 + n2;
+var userInput;
+var userName;
+userInput = 7;
+userInput = 'May';
+if (typeof userInput === 'string') {
+    userName = userInput;
 }
-function printResult(num) {
-    console.log('Result: ' + num);
+function generateError(message, code) {
+    throw {
+        message: message,
+        errorCode: code
+    };
 }
-printResult(add(4, 4));
-var combineValues;
-combineValues = add;
-console.log(combineValues(8, 8));
+generateError('An error occurred!', 500);
